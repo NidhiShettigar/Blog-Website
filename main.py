@@ -26,12 +26,12 @@ class Contacts(db.Model):
 
 @app.route("/")
 def home():
-    return render_template('index.html')
+    return render_template('index.html', params = params)
 
 
 @app.route("/about")
 def about():
-    return render_template('about.html')
+    return render_template('about.html', params = params)
 
 
 @app.route("/contact", methods = ['GET','POST'])
@@ -45,7 +45,7 @@ def contact():
         entry = Contacts(name=name, email=email, phone_number=phone,message=msg, date=datetime.now())
         db.session.add(entry)
         db.session.commit()
-    return render_template('contact.html')
+    return render_template('contact.html', params = params)
 
 
 app.run(debug=True)

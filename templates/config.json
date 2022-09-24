@@ -3,6 +3,8 @@
     {
         "local_server":"True",
         "local_uri":"mysql+pymysql://root:@localhost/bloggersite",
-        "prod_uri":"mysql+pymysql://root:@localhost/bloggersite"
+        "prod_uri":"mysql+pymysql://root:@localhost/bloggersite",
+        "fb_url":"https://facebook.com/bloggersite",
+        "blog_name":"BloggersPlatform"
     }
 }
